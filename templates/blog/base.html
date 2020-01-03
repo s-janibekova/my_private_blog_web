@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Блог</title>
+    <link href="{% static "css/blog.css" %}" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Gelasio|Ibarra+Real+Nova|Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+   <div class="module-border-wrap">
+       <div id="sidebar">
+    <h2>Mой блог</h2>
+    <p>Saltanat Janybekova</p>
+</div>
+
+   </div>
+
+</body>
+</html>

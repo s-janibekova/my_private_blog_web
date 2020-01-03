@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}
+
+{% block title %} Мой личный блог {% endblock %}
+
+{% block content %}
+    <h2> Статьи </h2>
+    {% for post in posts %}
+        <a href="{{ post.get_absolute_url }}">
+            {{ post.title}}
+        </a>
+        <p class="date">
+            {{ post.publish  }} by {{ post.author }}
+        </p>
+        {{ post.body|truncatewords:30|linebreaks }}
+    {% endfor %}
+{% endblock %}
