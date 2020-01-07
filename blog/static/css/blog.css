@@ -94,3 +94,13 @@ input[type=submit] {
     font-size:12px;
     color:#666;
 }
+
+/*Share form*/
+
+form label  {
+    font-size: 1.5rem;
+}
+
+.button-form {
+    padding-top: 350px;
+}
