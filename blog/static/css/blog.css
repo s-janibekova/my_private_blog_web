@@ -84,10 +84,13 @@ input[type=submit] {
 
 /* comments */
 .comment {
-    padding:10px;
+    padding:2px;
+    border-radius: 10%;
+    width: 50%;
+    margin: auto;
 }
 .comment:nth-child(even) {
-    background:#efefef;
+    background: #ffeaea;
 }
 .comment .info {
     font-weight:bold;
@@ -104,3 +107,26 @@ form label  {
 .button-form {
     padding-top: 350px;
 }
+
+
+/*Comments section*/
+.comments  label{
+    font-size: 1rem;
+}
+
+.comments {
+    width: 80%;
+    display: block;
+    padding:  2em 3em;
+}
+
+.box{
+    background-color: #fae3d9;
+    padding-bottom: 12em;
+    width: inherit;
+    margin-left: 170px;
+    align-items: center;
+    border-radius: 30%;
+}
+
+

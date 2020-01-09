@@ -14,4 +14,43 @@
             Поделитсья этим постом
         </a>
     </p>
+
+
+    {% with comments.count as total_comments %}
+        {{ total_comments }}
+{#    {{ total_comments }} комментарий {{ total_comments|pluralize }}#}
+    {% endwith %}
+
+    {% for comment in comments %}
+        <div class="comment">
+            <p class="info">{{ forloop.counter }} {{ comment.name }}</p>
+            <p>{{ comment.body }}</p>
+        <p>{{ comment.created }} </p>
+        </div>
+        {% empty %}
+            <p>Комментарий пока нет</p>
+    {% endfor %}
+
+{% if new_comment %}
+  <p>Ваш коммент был добавлен.</p>
+{% else %}
+  <p>Добавить новый комментарий</p>
+    <div class="box">
+      <form id="my-form" class="comments" action="." method="post">
+    {{ comment_form.as_p }}
+    {% csrf_token %}
+    <p><input type="submit"  value="Добавить"></p>
+  </form>
+
+    </div>
+
+{% endif %}
 {% endblock %}
+
+
+<script>
+   document.getElementById('my-form').onsubmit(function(e) {
+   e.preventDefault();
+   // do something
+});
+</script>
